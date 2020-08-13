@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_delivery_ui/widgets/widgets.dart';
 import '../data/data.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,10 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 hintText: 'Search Food or Restaurants',
                 prefixIcon: Icon(Icons.search, size: 30),
                 suffixIcon: IconButton(icon: Icon(Icons.clear), onPressed: (){}),
-                
               ),
             ),
-          )
+          ),
+          RecentOrders()
         ],
       ),
     );
