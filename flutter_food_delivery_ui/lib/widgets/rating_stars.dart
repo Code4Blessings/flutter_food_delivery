@@ -11,6 +11,12 @@ class RatingStars extends StatelessWidget {
     for (int i = 0; i < rating; i++) {
       stars += '⭐';
     }
-    return Text('stars');
+    stars.trim();
+    return Text(
+      stars,
+      style: TextStyle(
+        fontSize: 18.0,
+      ),
+    );
   }
 }
