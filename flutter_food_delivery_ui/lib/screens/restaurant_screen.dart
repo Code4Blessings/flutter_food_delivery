@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_delivery_ui/models/restaurant.dart';
+import 'package:flutter_food_delivery_ui/widgets/widgets.dart';
 
 class RestaurantScreen extends StatefulWidget {
   final Restaurant restaurant;
@@ -46,8 +47,32 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                     )
                   ],
                 ),
-              )
+                
+              ),
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Column(children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(widget.restaurant.name,
+                  style: TextStyle(
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.w600
+                  ),
+                  ),
+                  Text('0.2 miles away',
+                    style: TextStyle(
+                      fontSize: 18.0
+                    ),
+                  ),
+                ],
+              ),
+              RatingStars(widget.restaurant.rating)
+            ],
+            ),
           )
         ],
       ),
